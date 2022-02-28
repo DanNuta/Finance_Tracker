@@ -1,6 +1,5 @@
 import { useState } from "react";
-import {projectAuth} from "../hook/useSignup"
-
+import {projectAuth} from "../firebase/config";
 
 const useSignup = () => {
 

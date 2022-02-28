@@ -1,11 +1,15 @@
 import { useState } from "react";
-import style from "./signin.module.css"
+import style from "./signin.module.css";
+import {useSi} from "../../hook/useSignup"
+
 
 const Signup = () => {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    
 
     const submitSignUp = (e) =>{
         e.preventDefault()
@@ -15,6 +19,8 @@ const Signup = () => {
             email: email,
             password: password
         }
+
+       
         
         console.log(signUp)
         setName("")
@@ -34,7 +40,7 @@ const Signup = () => {
             <label htmlFor="password">Password</label>
             <input onChange={(e) => setPassword(e.target.value)} type="password" id="password" value={password} />
 
-            <button>Add</button>
+           
 
         </form>
      );
