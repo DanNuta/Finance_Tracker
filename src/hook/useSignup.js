@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {projectAuth} from "../firebase/config";
 
-const useSignup = () => {
+export const useSignup = () => {
 
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(false)
@@ -28,4 +28,3 @@ const useSignup = () => {
     return {error, loading, signup}
 }
  
-export default useSignup;
